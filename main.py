@@ -15,310 +15,34 @@ YELLOW = Fore.YELLOW
 GREEN = Fore.GREEN
 CYAN = Fore.CYAN
 RESET = Style.RESET_ALL
-data = [
-    " ***  ****   ***  ****  ***** *****  ***  *   * ***** ***** *   * *     *   * *   *  ***  ****   ***  ****   **** ***** *   * *   * *   * *   * *   * *****        ***                     ***  ***   ****  ****  *   * *****  ***  *****  ***  ***** ",
-    "*   * *   * *   * *   * *     *     *     *   *   *      *  *  *  *     ** ** **  * *   * *   * *   * *   * *       *   *   * *   * *   *  * *   * *     *        * ***                   *   *   *       *     * *   * *     *         * *   * *   * ",
-    "*   * ****  *     *   * ***   ****  *  ** *****   *      *  ***   *     * * * * * * *   * ****  *   * ****  *****   *   *   * *   * * * *   *     *     *         * * *       *****       *   *   *       *   **  ***** ****  ****      *  ***  ***** ",
-    "***** *   * *   * *   * *     *     *   * *   *   *   *  *  *  *  *     *   * *  ** *   * *     *   * *  *      *   *   *   *  * *  ** **  * *    *    *          * * *              ***  *   *   *   ***       *     *     * *   *     * *   *     * ",
-    "*   * ****   ***  ****  ***** *      ***  *   * *****  ***  *   * ***** *   * *   *  ***  *      ***  *   * ****    *   *****   *   *   * *   *   *   *****        ***  *****        ***   ***  ***** ***** ****      * ****   ***      *  ***      * "
+
+data=[
+ '   #    ####    ####  ####   #####  #####   ####  #   #  #####    ###  #   #  #      #   #  #   #   ###   ####    ###   ####    ####  #####  #   #  #   #  #   #  #   #  #   #  #####          ###                         ###     #     ###    ###      #   #####   ###   #####   ###    ###          #                 #           ##          #        #       #   #       #                                                       #                                              ',
+ '  # #   #   #  #    # #   #  #      #      #    # #   #    #       #   #  #   #      ## ##  ##  #  #   #  #   #  #   #  #   #  #    #   #    #   #  #   #  #   #  #   #  #   #      #         #   #                       #   #   ##    #   #  #   #    ##   #      #   #      #  #   #  #   #   ###   #       ###       #   ###    #      ####  #                    #  #    #     ## #   ####    ###   ####    ####  ####    ####   #     #   #  #   #  #   #  #   #  #   #  ##### ',
+ ' #   #  #   #  #      #    # #      #      #      #   #    #       #   # #    #      # # #  # # #  #   #  #   #  #   #  #   #  #        #    #   #  #   #  #   #   # #    # #      #          # ###                #####  #  ##    #        #      #   # #   #      #         #   #   #  #   #      #  ####   #   #   ####  #   #  ####   #   #  ####     #       #   # #     #     # # #  #   #  #   #  #   #  #   #  #   #  #      ####   #   #  #   #  #   #   # #   #   #     #  ', 
+ ' #####  ####   #      #    # #####  #####  #  ### #####    #       #   ##     #      #   #  #  ##  #   #  ####   #   #  ####    ###     #    #   #  #   #  #   #    #      #      #           # # #         #####         # # #    #       #    ###   #  #   ####   ####     #     ###    ####   ####  #   #  #      #   #  #####   #      ####  #   #    #       #   ##      #     # # #  #   #  #   #  #   #  #   #  #       ###    #     #   #  #   #  # # #    #     ####    #   ',
+ ' #   #  #   #  #      #    # #      #      #    # #   #    #    #  #   # #    #      #   #  #   #  #   #  #      # # #  # #        #    #    #   #   # #   # # #   # #     #     #            # ###                #####  ##  #    #      #        #  #####      #  #   #   #     #   #      #  #   #  #   #  #   #  #   #  #       #         #  #   #    #    #  #   # #     #     #   #  #   #  #   #  ####    ####  #          #   #     #   #   # #   ## ##   # #       #   #    ',
+ ' #   #  #   #  #    # #   #  #      #      #    # #   #    #    #  #   #  #   #      #   #  #   #  #   #  #      #  #   #  #   #   #    #    #   #   # #   ## ##  #   #    #    #             #                           #   #    #     #     #   #     #   #   #  #   #   #     #   #  #   #   ####  ####    ###    ####   ###    #      ###   #   #    #     ##    #  #     ##   #   #  #   #   ###   #          #  #      ####    ##     ####    #    #   #  #   #   ###   ##### ',
+ ' #   #  ####    ####  ####   #####  #       ####  #   #  #####   ##    #   #  #####  #   #  #   #   ###   #       ## #  #   #   ###     #     ###     #    #   #  #   #    #    #####          ###   #####                 ###   #####  #####   ###      #    ###    ###    #      ###    ###                                                                                                            #          #                                                                '
 ]
-
-ascii_lowercase_7x7 = {
-"a": [
-"       ",
-"  ###  ",
-"     # ",
-"  #### ",
-" #   # ",
-"  #### ",
-"       "
-],
-
-"b": [
-"#      ",
-"#      ",
-"####   ",
-"#   #  ",
-"#   #  ",
-"####   ",
-"       "
-],
-
-"c": [
-"       ",
-"  #### ",
-" #     ",
-" #     ",
-" #     ",
-"  #### ",
-"       "
-],
-
-"d": [
-"     # ",
-"     # ",
-"  #### ",
-" #   # ",
-" #   # ",
-"  #### ",
-"       "
-],
-
-"e": [
-"       ",
-"  ###  ",
-" #   # ",
-" ##### ",
-" #     ",
-"  ###  ",
-"       "
-],
-
-"f": [
-"   ##  ",
-"  #    ",
-" ####  ",
-"  #    ",
-"  #    ",
-"  #    ",
-"       "
-],
-
-"g": [
-"       ",
-"  #### ",
-" #   # ",
-" #   # ",
-"  #### ",
-"     # ",
-"  ###  "
-],
-
-"h": [
-"#      ",
-"#      ",
-"####   ",
-"#   #  ",
-"#   #  ",
-"#   #  ",
-"       "
-],
-
-"i": [
-"   #   ",
-"       ",
-"  ##   ",
-"   #   ",
-"   #   ",
-"  ###  ",
-"       "
-],
-
-"j": [
-"    #  ",
-"       ",
-"    #  ",
-"    #  ",
-"#   #  ",
-" ###   ",
-"       "
-],
-
-"k": [
-"#      ",
-"#   #  ",
-"#  #   ",
-"###    ",
-"#  #   ",
-"#   #  ",
-"       "
-],
-
-"l": [
-"  ##   ",
-"   #   ",
-"   #   ",
-"   #   ",
-"   #   ",
-"  ###  ",
-"       "
-],
-
-"m": [
-"       ",
-"## # ##",
-"# # # #",
-"# # # #",
-"#   # #",
-"#   # #",
-"       "
-],
-
-"n": [
-"       ",
-"## ##  ",
-"#  #   ",
-"#   #  ",
-"#   #  ",
-"#   #  ",
-"       "
-],
-
-"o": [
-"       ",
-"  ###  ",
-" #   # ",
-" #   # ",
-" #   # ",
-"  ###  ",
-"       "
-],
-
-"p": [
-"       ",
-"####   ",
-"#   #  ",
-"####   ",
-"#      ",
-"#      ",
-"       "
-],
-
-"q": [
-"       ",
-"  ###  ",
-" #   # ",
-" #   # ",
-"  #### ",
-"     # ",
-"     # "
-],
-
-"r": [
-"       ",
-"###    ",
-"#  #   ",
-"#      ",
-"#      ",
-"#      ",
-"       "
-],
-
-"s": [
-"       ",
-"  #### ",
-" #     ",
-"  ###  ",
-"     # ",
-" ####  ",
-"       "
-],
-
-"t": [
-"   #   ",
-"  ###  ",
-"   #   ",
-"   #   ",
-"   #   ",
-"    ## ",
-"       "
-],
-
-"u": [
-"       ",
-"#   #  ",
-"#   #  ",
-"#   #  ",
-"#   #  ",
-" ####  ",
-"       "
-],
-
-"v": [
-"       ",
-"#   #  ",
-"#   #  ",
-"#   #  ",
-" # #   ",
-"  #    ",
-"       "
-],
-
-"w": [
-"       ",
-"#   #  ",
-"#   #  ",
-"# # #  ",
-"## ##  ",
-"#   #  ",
-"       "
-],
-
-"x": [
-"       ",
-"#   #  ",
-" # #   ",
-"  #    ",
-" # #   ",
-"#   #  ",
-"       "
-],
-
-"y": [
-"       ",
-"#   #  ",
-" # #   ",
-"  #    ",
-"  #    ",
-" ##    ",
-"       "
-],
-
-"z": [
-"       ",
-" ##### ",
-"    #  ",
-"   #   ",
-"  #    ",
-" ##### ",
-"       "
-]
-}
-
-
-
-
-def render(letter, fill='*'):
-    grid = ascii_lowercase_7x7[letter.lower()]
-    for row in grid:
-        print(RED+row.replace('*', fill)+RESET)
 
 
 def oneCharacter():
-     os.system("cls")
-     print("\n\n",CYAN+"*"*10+RESET,CYAN+"ASCII ART PROJECT"+RESET,CYAN+"*"*10+RESET,end="\n\n")
-     print("\n\n",CYAN+"*"*10+RESET,CYAN+"One Character Module"+RESET,CYAN+"*"*10+RESET,end="\n\n")
-     text = input(GREEN+"Enter a Character (Only One Character) -- "+RESET)
-     if text.isupper():
-         if len(text) != 1:
-                print(GREEN+"\n\nPlease Enter Only One Letter -- \n\n"+RESET)
-                oneCharacter()
-         else:
-            print(YELLOW+"\n\nYou Entered -- {0}\n\n".format(text)+RESET)
-            n=((ord(text)-65)*6 if ord(text)>64 and ord(text)<92 else 26*6 if text==" " else 27 * 6 if text == "@" else 28 * 6 if text == "_" else 29 * 6 if text == "-" else 30 * 6 if text == "." else (31+ord(text)-48)*6)
-            for i in data:
-                for j in range(n , n + 6):
-                    print(RED+i[j]+RESET,end="")
-                print()
-     else:
-        #  print("hohohohoho")
-        if len(text) != 1:
-            print(GREEN+"\n\nPlease Enter Only One Letter -- \n\n"+RESET)
-            oneCharacter()
-        else:
-         print(YELLOW+"\n\nYou Entered -- {0}\n\n".format(text)+RESET)
-         render(text)
-           
+    os.system("cls")
+    print("\n\n",CYAN+"*"*10+RESET,CYAN+"ASCII ART PROJECT"+RESET,CYAN+"*"*10+RESET,end="\n\n")
+    print("\n\n",CYAN+"*"*10+RESET,CYAN+"One Character Module"+RESET,CYAN+"*"*10+RESET,end="\n\n")
+    text = input(GREEN+"Enter a Character (Only One Character) -- "+RESET)
+    if len(text) != 1:
+        print(GREEN+"\n\nPlease Enter Only One Letter -- \n\n"+RESET)
+        oneCharacter()
+    else:
+        print(YELLOW+"\n\nYou Entered -- {0}\n\n".format(text)+RESET)
+        n=((ord(text)-65)*7 if ord(text)>=65 and ord(text)<=90 else 26*7 if text==" " else 27 * 7 if text == "@" else 28 * 7 if text == "_" else 29 * 7 if text == "-" else 30 * 7 if text == "=" else (31+ord(text)-48)*7 if ord(text)>=48 and ord(text)<=57 else (ord(text)-97+41)*7)
+        for i in data:
+            for j in range(n , n + 7):
+                print(RED+i[j]+RESET,end="")
+            print()
+
 def alphaNumWords():
     os.system("cls")
     sys.stdin.flush()
@@ -326,21 +50,12 @@ def alphaNumWords():
     print("\n\n",CYAN+"*"*10+RESET,CYAN+"One Character Module"+RESET,CYAN+"*"*10+RESET,end="\n\n")
     text = input(GREEN+"Enter String (output will show according to terminal size)-- "+RESET)
     print(YELLOW+"\n\nYou Entered -- {0}\n\n".format(text)+RESET)
-    if text.isupper():
-        for i in data:
-                for x in text:
-                    n=((ord(x)-65)*6 if ord(x)>64 and ord(x)<92 else 26*6 if x==" " else 27 * 6 if x == "@" else 28 * 6 if x == "_" else 29 * 6 if x == "-" else 30 * 6 if x == "." else (31+ord(x)-48)*6) 
-                    for j in range(n , n + 6):
-                        print(RED+i[j]+RESET,end="")
-                print()
-    else:
+    for i in data:        
         for x in text:
-                if x.isdigit() or x==" ":
-                    continue
-                else:
-                    render(x)
-                    print("\n")
-
+            n=((ord(x)-65)*7 if ord(x)>=65 and ord(x)<=90 else 26*7 if x==" " else 27 * 7 if x == "@" else 28 * 7 if x == "_" else 29 * 7 if x == "-" else 30 * 7 if x == "=" else (31+ord(x)-48)*7 if ord(x)>=48 and ord(x)<=57 else (ord(x)-97+41)*7)
+            for j in range(n , n + 7):
+                print(RED+i[j]+RESET,end="")
+        print()
 
 def alphaRange():
      
@@ -348,7 +63,7 @@ def alphaRange():
      sys.stdin.flush()
      print("\n\n",CYAN+"*"*10+RESET,CYAN+"ASCII ART PROJECT"+RESET,CYAN+"*"*10+RESET,end="\n\n")
      print("\n\n",CYAN+"*"*10+RESET,CYAN+"One Character Module"+RESET,CYAN+"*"*10+RESET,end="\n\n")
-     text = input(GREEN+"Enter Range Between (1 to 15 Character) & in Sequence Like (A-D) -- "+RESET)
+     text = input(GREEN+"Enter Range Between (1 to 15 Character) & in Sequence Like (A-D) OR (z-u) -- "+RESET)
      if not (len(text)==3):
         print(GREEN+"\n\nPlease Enter Valid Range -- \n\n"+RESET)
         alphaRange()
@@ -367,14 +82,13 @@ def alphaRange():
                 temp = alphabet[st:en+1]
             for i in data:
                 for x in temp:
-                    n=((ord(x)-65)*6 if ord(x)>64 and ord(x)<92 else 26*6 if x==" " else 27 * 6 if x == "@" else 28 * 6 if x == "_" else 29 * 6 if x == "-" else 30 * 6 if x == "." else (31+ord(x)-48)*6) 
-                    for j in range(n , n + 6):
+                    n=((ord(x)-65)*7 if ord(x)>=65 and ord(x)<=90 else 26*7 if x==" " else 27 * 7 if x == "@" else 28 * 7 if x == "_" else 29 * 7 if x == "-" else 30 * 7 if x == "=" else (31+ord(x)-48)*7 if ord(x)>=48 and ord(x)<=57 else (ord(x)-97+41)*7)
+                    for j in range(n , n + 7):
                         print(RED+i[j]+RESET,end="")
                 print()
-        else:
+        elif text.islower():
             st=ord(text[0])-97
             en=ord(text[2])-97
-            temp=""
             if st>en:
                 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                 temp = alphabet[en:st+1]
@@ -382,10 +96,15 @@ def alphaRange():
             else:
                 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                 temp = alphabet[st:en+1]
-
-            for x in temp:
-                render(x)
-                print("\n")
+            temp=temp.lower()
+            for i in data:
+                for x in temp:
+                    n=((ord(x)-65)*7 if ord(x)>=65 and ord(x)<=90 else 26*7 if x==" " else 27 * 7 if x == "@" else 28 * 7 if x == "_" else 29 * 7 if x == "-" else 30 * 7 if x == "=" else (31+ord(x)-48)*7 if ord(x)>=48 and ord(x)<=57 else (ord(x)-97+41)*7)
+                    for j in range(n , n + 7):
+                        print(RED+i[j]+RESET,end="")
+                print()
+        else:
+            alphaRange()
 
 def onlyAlpha():
     os.system("cls")
@@ -404,21 +123,13 @@ def onlyAlpha():
             onlyAlpha()
         else:
             print(GREEN+"\n\nYou Entered -- {0}\n\n".format(text)+RESET)
-            if text.isupper():
-                for i in data:
-                    for x in text:
-                        n =(ord(x) - 65)*6 
-                        for j in range(n , n + 6):
-                            print(RED+i[j]+RESET,end="")
-                    print()
-            else:
+            for i in data:        
                 for x in text:
-                    if x==" ":
-                        continue
-                    else:
-                        render(x)
-                        print("\n")
-    
+                    n=((ord(x)-65)*7 if ord(x)>=65 and ord(x)<=90 else 26*7 if x==" " else 27 * 7 if x == "@" else 28 * 7 if x == "_" else 29 * 7 if x == "-" else 30 * 7 if x == "=" else (31+ord(x)-48)*7 if ord(x)>=48 and ord(x)<=57 else (ord(x)-97+41)*7)
+                    for j in range(n , n + 7):
+                        print(RED+i[j]+RESET,end="")
+                print()
+
 def onlyNum():
      os.system("cls")
      sys.stdin.flush()
@@ -438,10 +149,11 @@ def onlyNum():
             print(GREEN+"\n\nYou Entered -- {0}\n\n".format(text)+RESET)
             for i in data:
                 for x in text:
-                    n =(31+ord(x)-48)*6
-                    for j in range(n , n + 6):
+                    n =(31+ord(x)-48)*7
+                    for j in range(n , n + 7):
                         print(RED+i[j]+RESET,end="")
                 print()
+
 def mainUI():
     os.system("cls")
     print("\n\n",CYAN+"*"*10+RESET,CYAN+"ASCII ART PROJECT"+RESET,CYAN+"*"*10+RESET,end="\n\n")
